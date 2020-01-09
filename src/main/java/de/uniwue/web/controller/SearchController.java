@@ -43,14 +43,12 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * Communication Controller to provide file contents
- * and process save as well as export requests
+ * Search Controller to provide alignment search
+ * function using python and json as API
  */
 @Controller
 @Scope("request")
 public class SearchController {
-
-
     @Autowired
     private ServletContext servletContext;
     @Autowired
