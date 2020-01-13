@@ -185,9 +185,9 @@
 						tooltip="Switch to Text View.">textView</t:menuIcon> 
 					<t:menuIcon jsClass="hideTextView hide" icon="description"
 						tooltip="Switch to Page View.">pageView</t:menuIcon>
-					<t:menuIcon jsClass="displaySearchView" icon="search"
+					<t:menuIcon jsClass="displaySearchView active" icon="search"
 								tooltip="Switch to Search View.">searchView</t:menuIcon>
-					<t:menuIcon jsClass="hideSearchView hide" icon="search"
+					<t:menuIcon jsClass="hideSearchView" icon="search"
 								tooltip="Switch to regular Text View.">hideSearchView</t:menuIcon>
 				</div>
 			</div>

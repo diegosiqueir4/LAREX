@@ -105,8 +105,14 @@ function GuiInput(navigationController, controller, gui, textViewer, selector) {
 	$('.displayTextView').click(() => _controller.displayTextViewer(true));
 	$('.hideTextView').click(() => _controller.displayTextViewer(false));
 
-	$('.displaySearchView').click(() => _controller.displaySearchViewer(true));
-	$('.hideSearchView').click(() => _controller.displaySearchViewer(false));
+	$('.displaySearchView').click(() => {
+		controller.displaySearchViewer(true);
+		_controller.displayPage($(this).data("page"), $(this).data("imagenr"));
+	});
+	$('.hideSearchView').click(() => {
+		controller.displaySearchViewer(false)
+		_controller.displayPage($(this).data("page"), $(this).data("imagenr"));
+	});
 
 	$('.zoomin').click(() => {
 		if(_textViewer.isOpen()){

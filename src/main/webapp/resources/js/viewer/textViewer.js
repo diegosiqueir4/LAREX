@@ -44,6 +44,18 @@ class TextViewer {
 		}
 	}
 
+	displaySearch(doSearch) {
+		if(doSearch){
+			$('.hideTextView').removeClass('hide');
+			$('.displayTextView').addClass('hide');
+		} else {
+			this.root.addClass("hide");
+			$(".zoom_second").addClass("hide");
+			$('.hideTextView').addClass('hide');
+			$('.displayTextView').removeClass('hide');
+		}
+	}
+
 	/**
 	 * Check if the textviewer is currently opened.
 	 */
