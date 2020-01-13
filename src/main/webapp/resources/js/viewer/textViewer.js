@@ -392,7 +392,7 @@ class TextViewer {
 
 	_createSearchObject(textline) {
 		console.log(textline);
-		const $textlineText =  $(`<input class='textline-text'></input>`);
+		const $textlineText =  $(`<input class='textline-search'></input>`);
 /*
 		// Fill with content
 		const hasPredict = 1 in textline.text;
