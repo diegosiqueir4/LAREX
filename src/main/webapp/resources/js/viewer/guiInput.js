@@ -105,6 +105,9 @@ function GuiInput(navigationController, controller, gui, textViewer, selector) {
 	$('.displayTextView').click(() => _controller.displayTextViewer(true));
 	$('.hideTextView').click(() => _controller.displayTextViewer(false));
 
+	$('.displaySearchView').click(() => _controller.displaySearchViewer(true));
+	$('.hideSearchView').click(() => _controller.displaySearchViewer(false));
+
 	$('.zoomin').click(() => {
 		if(_textViewer.isOpen()){
 			_textViewer.zoomGlobalImage(0.05);

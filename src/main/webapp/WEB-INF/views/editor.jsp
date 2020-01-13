@@ -184,7 +184,11 @@
 					<t:menuIcon jsClass="displayTextView" icon="subject"
 						tooltip="Switch to Text View.">textView</t:menuIcon> 
 					<t:menuIcon jsClass="hideTextView hide" icon="description"
-						tooltip="Switch to Page View.">pageView</t:menuIcon> 
+						tooltip="Switch to Page View.">pageView</t:menuIcon>
+					<t:menuIcon jsClass="displaySearchView" icon="search"
+								tooltip="Switch to Search View.">searchView</t:menuIcon>
+					<t:menuIcon jsClass="hideSearchView hide" icon="search"
+								tooltip="Switch to regular Text View.">hideSearchView</t:menuIcon>
 				</div>
 			</div>
 		</div>

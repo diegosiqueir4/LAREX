@@ -62,7 +62,7 @@ public class SearchController {
      **/
     @PostConstruct
     private void init() {
-        if (!fileManager.isInit()) {
+        /*if (!fileManager.isInit()) {
             fileManager.init(servletContext);
         }
         if (!config.isInitiated()) {
@@ -71,17 +71,24 @@ public class SearchController {
             if (!bookFolder.equals("")) {
                 fileManager.setLocalBooksPath(bookFolder);
             }
-        }
+        }*/
     }
 
+
     /**
-     * Request an image of a book, by book name and image name.
-     * Use resize to get a downscaled preview image, with a width of 300px.
+     * Request to check if a text corpus is already indexed
+     * @return true/false if text corpus in indexed
      */
-    @RequestMapping(value = "/images/books/{book}/{image}", method = RequestMethod.GET)
-    public void getImage(@PathVariable("book") final String book,
-                         @PathVariable("image") final String image,
-                         @RequestParam(value = "resize", defaultValue = "false") boolean doResize) throws IOException {
+    @RequestMapping(value = "/search/checkIndex/}", method = RequestMethod.GET)
+    public boolean checkIndex() {
+        return true;
+    }
+    /**
+     * Request to search the text corpus
+     * @param searchText Text to be searched for in text corpus
+     */
+    @RequestMapping(value = "/search/text/}", method = RequestMethod.GET)
+    public void search( @RequestParam("searchText") String searchText) {
 
     }
 }

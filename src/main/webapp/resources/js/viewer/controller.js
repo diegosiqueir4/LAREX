@@ -1258,7 +1258,13 @@ function Controller(bookID, accessible_modes, canvasID, regionColors, colors, gl
 			_gui.updateZoom();
 		}
 	}
-
+	/**
+	 * Toggle search mode
+	 */
+	this.displaySearchViewer = function(isSearch){
+	    _textViewer.isSearch = isSearch;
+		this.displayTextViewer(true);
+	}
 	this.changeImageMode = function (imageMode) {
 		_settings.imageSegType = imageMode;
 	}

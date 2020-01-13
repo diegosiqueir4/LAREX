@@ -12,6 +12,8 @@ class TextViewer {
 		this._zoomText = 1;
 		this._baseImageSize = 35;
 		this._baseFontSize = 20;
+
+		this.isSearch = false;
 	}
 
 	/**
@@ -79,8 +81,10 @@ class TextViewer {
 		$textlineContainer.append(this._createImageObject(textline));
 		$textlineContainer.append($("<br>"));
 		$textlineContainer.append(this._createTextObject(textline));
-		$textlineContainer.append($("<br>"));
-		$textlineContainer.append(this._createTextObject(this._createTextObject(textline)));
+		if(this.isSearch) {
+            $textlineContainer.append($("<br>"));
+            $textlineContainer.append(this._createSearchObject("log this"));
+        }
 		this.container.append($textlineContainer);
 
 		this.zoomBase(textline.id);
@@ -386,6 +390,29 @@ class TextViewer {
 		return $textlineText;
 	}
 
+	_createSearchObject(textline) {
+		console.log(textline);
+		const $textlineText =  $(`<input class='textline-text'></input>`);
+/*
+		// Fill with content
+		const hasPredict = 1 in textline.text;
+		var hasGT = 0 in textline.text;
+
+		if(hasGT){
+			$textlineText.addClass("line-corrected")
+			$textlineText.val(textline.text[0]);
+		} else {
+			$textlineText.removeClass("line-corrected")
+			$textlineText.removeClass("line-saved");
+			if (hasPredict){
+				$textlineText.val(textline.text[1]);
+			} else {
+				$textlineText.val("");
+			}
+		}*/
+		$textlineText.val("has searched");
+		return $textlineText;
+	}
 	/**
 	 * Create a textline image object for a given textline
 	 * 
